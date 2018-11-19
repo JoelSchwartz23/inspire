@@ -2,12 +2,14 @@ import WeatherService from "./weather-service.js";
 
 var weatherService = new WeatherService()
 
-function drawWeather(weathers) {
-	console.log(weathers)
+function drawWeather(wData) {
+	console.log("Weather Data:", wData)
+	let kTemp = wData.main.temp;
+	let fTemp = Math.ceil((kTemp * (9 / 5)) - 459.67);
 	let Template = `
-	<p> <b>Weather:</b> ${Math.round((weathers.main.temp - 273.15) * 1.8) + 32}°F </p>
-	<p><b>${weathers.weather[0].description}</b></p>
-	<p> <i class="fas fa-city"></i> <b>City-</b> <b>${weathers.name}</b></p>
+	<p> <b>Weather:</b> ${fTemp}°F </p>
+	<p><b>${wData.weather[0].description}</b></p>
+	<p> <i class="fas fa-city"></i> <b>City-</b> <b>${wData.name}</b></p>
 	`
 	document.getElementById("weather").innerHTML = Template
 }

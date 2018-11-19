@@ -11,10 +11,20 @@ function drawQuote(quotes) {
 function getTime() {
 	let date = new Date()
 	let hours = date.getHours()
+	let strHours = hours % 12 > 0 ? hours % 12 : hours
 	let minutes = date.getMinutes()
+	let strMinutes = minutes.toString()
+	if (strMinutes.length == 1) {
+		strMinutes = '0' + strMinutes
+	}
 	let seconds = date.getSeconds()
+	let strSeconds = seconds.toString()
+	if (strSeconds.length == 1) {
+		strSeconds = '0' + strSeconds
+	}
+	let tod = Math.floor(hours / 12) > 0 ? "PM" : "AM"
 
-	let time = hours + ":" + minutes + ":" + seconds + " ";
+	let time = (hours % 12) + ":" + strMinutes + ":" + strSeconds + " " + tod;
 
 	document.getElementById("time").innerText = time;
 	document.getElementById("time").textContent = time;

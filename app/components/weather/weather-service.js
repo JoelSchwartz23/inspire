@@ -17,7 +17,8 @@ export default class WeatherService {
 			// Have you ever wanted to know the temperature measured in kelvin? That is what this data returns!
 			// res.data.temp is the temperature in Kelvin
 			// You should probably convert the temperature data to either F or C
-			callWhenDone(res.data);
+			let wData = res.data;
+			callWhenDone(wData);
 		})
 	}
 }

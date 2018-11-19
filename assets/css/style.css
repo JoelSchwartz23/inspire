@@ -1,11 +1,13 @@
 .background{
   background-image: unset;
-  background-size: cover;
-  background-position: center;
+ 
   background-repeat: no-repeat;
   background-attachment: fixed; 
 }
-
+body {
+  background-size: cover;
+  background-position: center;
+}
 ul{
   list-style-type: none; 
 }

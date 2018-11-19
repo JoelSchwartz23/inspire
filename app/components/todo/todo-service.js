@@ -7,7 +7,7 @@ const todoApi = axios.create({
 });
 
 function logError(e) {
-	console.log(e)
+	throw new Error(e)
 }
 
 
@@ -42,18 +42,21 @@ export default class TodoService {
 			.catch(logError)
 	}
 
-	toggleTodoStatus(todoId) {
+	toggleTodoStatus(todoId, getTodos) {
 		// MAKE SURE WE THINK THIS ONE THROUGH
 		//STEP 1: Find the todo by its index **HINT** todoList
+		let todo = {}
+		for (let i = 0; i < todoList.length; i++) {
+			let t = todoList[i];
+			if (todoId == t._id) {
+				todo = t;
+			}
+		}
+		todo.completed = !todo.completed;
 
-		var todo = {} ///MODIFY THIS LINE
-
-		//STEP 2: Change the completed flag to the opposite of what is is **HINT** todo.completed = !todo.completed
 		todoApi.put(todoId, todo)
 			.then(function (res) {
-				todo.completed = !todo.completed;
-				this.getTodos()
-				//DO YOU WANT TO DO ANYTHING WITH THIS?
+				getTodos()
 			})
 			.catch(logError)
 	}
