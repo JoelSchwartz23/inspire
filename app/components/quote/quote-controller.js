@@ -28,9 +28,9 @@ function getTime() {
 
 	document.getElementById("time").innerText = time;
 	document.getElementById("time").textContent = time;
-	setInterval(getTime, 1000);
 }
 getTime();
+setInterval(getTime, 1000);
 
 export default class QuoteController {
 	constructor() {

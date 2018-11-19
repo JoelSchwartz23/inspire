@@ -13,13 +13,13 @@
 </head>
 
 <body>
-	<div id="background" class="background">
+	<div class="container-fluid">
 		<div class="row">
-
+			<div class="col-6"></div>
+			<div id="weather" class="weather"></div>
 		</div>
 	</div>
-	<div id="weather" class="weather">
-	</div>
+
 
 	<div id="time" class="time">
 	</div>
@@ -28,7 +28,6 @@
 	</div>
 
 	<div class="todolist">
-		To do List
 		<ul id="todo"></ul>
 		<form onsubmit="app.controllers.todoController.addTodoFromForm(event)">
 			<input type="text" onfocus="" name="description">

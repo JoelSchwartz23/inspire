@@ -48,7 +48,7 @@ ul{
   position: absolute;
   padding-left: 10px;
   padding-right: 10px;
-  top: 40px;
+  top: 20px;
   right: 40px;
   color:white;
   text-shadow: 2px 2px black;
@@ -96,5 +96,18 @@ transform: scale(1.02);
   transition: .3s linear;
   box-shadow: 2px 2px 2px 2px black;
   border-radius:5px 5px 5px 5px;
+}
+
+input[type=text]{
+  margin-bottom: 5px;
+  margin-top: 5px;
+  width: 80%;
+  background-color: gray;
+  border: none;
+  border-bottom: 2px solid black;
+}
+
+input[type=text]:focus{
+  background-color: rgba(170, 170, 182, 0.801);
 }
 

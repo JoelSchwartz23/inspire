@@ -15,7 +15,7 @@ function drawTodo(todos) {
 	//WHAT IS MY PURPOSE?
 	//BUILD YOUR TODO TEMPLATE HERE
 	console.log(todos)
-	var template = `${todos.length}`
+	var template = `<b> To do list : </b>  <ins>${todos.length}</ins>`
 
 	//DONT FORGET TO LOOP
 	todos.forEach(todo => {
