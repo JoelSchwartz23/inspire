@@ -4,7 +4,7 @@ let _qs = new QuoteService
 
 function drawQuote(quotes) {
 	console.log(quotes)
-	let Template = `<p> <b>Author:</b> <i>${quotes.author}</i> | <b>Quote of the day:</b> "${quotes.body}"</p>`
+	let Template = `<p> <b>Author:</b> <b>${quotes.author}</b> | <b>Quote of the day:</b> "${quotes.body}"</p>`
 	document.getElementById("quote").innerHTML = Template
 }
 
