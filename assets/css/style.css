@@ -1,0 +1,98 @@
+.background{
+  background-image: unset;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+}
+
+ul{
+  list-style-type: none; 
+}
+
+.button{
+  font-size: 1px;
+  border-radius: .1px;
+}
+
+ .todolist:hover{
+  box-shadow:10px 10px 10px 10px black;
+  transform: scale(1.02);
+ }
+
+
+.todolist{
+  font-family: 'Acme', sans-serif;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-shadow: 1px 1px black;
+  text-shadow: 1px black;
+  transition: .3s linear;
+  box-shadow: 2px 2px 2px 2px black;
+  border-radius:5px 5px 5px 5px;
+}
+
+.weather:hover{
+  box-shadow:5px 5px 5px 5px black;
+  transform: scale(1.02);
+}
+
+.weather{
+  font-family: 'Acme', sans-serif;
+  position: absolute;
+  padding-left: 10px;
+  padding-right: 10px;
+  top: 40px;
+  right: 40px;
+  color:white;
+  text-shadow: 2px 2px black;
+  text-transform: capitalize;
+  transition: .3s linear;
+  box-shadow: 2px 2px 2px 2px black;
+  border-radius:5px 5px 5px 5px;
+}
+
+
+.quote:hover{
+  box-shadow:10px 10px 10px 10px black;
+  transform: scale(1.02);
+}
+
+.quote{
+  font-family: 'Acme', sans-serif;
+  position: absolute;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 30%;
+  top: 20px;
+  left: 10px;
+  color: white;
+  text-shadow: 1px 1px black;
+  transition: .3s linear;
+  box-shadow: 2px 2px 2px 2px black;
+  border-radius:5px 5px 5px 5px;
+}
+.time:hover{
+box-shadow:5px 5px 5px 5px black;
+transform: scale(1.02);
+}
+
+.time{
+  font-family: 'Acme', sans-serif;
+  position: absolute;
+  padding-left: 10px;
+  padding-right: 10px;
+  top: 40%;
+  left: 45%; 
+  color: white;
+  text-shadow: 2px 2px black;
+  font-size: 50px;
+  transition: .3s linear;
+  box-shadow: 2px 2px 2px 2px black;
+  border-radius:5px 5px 5px 5px;
+}
+

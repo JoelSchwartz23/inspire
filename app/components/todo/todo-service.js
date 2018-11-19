@@ -1,7 +1,8 @@
 
 
+// @ts-ignore
 const todoApi = axios.create({
-	baseURL: 'https://bcw-sandbox.herokuapp.com/api/YOURNAME/todos/',
+	baseURL: 'https://bcw-sandbox.herokuapp.com/api/Joels/todos/',
 	timeout: 3000
 });
 
@@ -18,16 +19,25 @@ export default class TodoService {
 		console.log("Getting the Todo List")
 		todoApi.get('')
 			.then((res) => { // <-- WHY IS THIS IMPORTANT????
-
+				todoList = res.data.data
+				draw(todoList)
 			})
 			.catch(logError)
 	}
 
-	addTodo(todo) {
+	addTodo(todo, getTodoscb) {
 		// WHAT IS THIS FOR???
 		todoApi.post('', todo)
 			.then(function (res) { // <-- WHAT DO YOU DO AFTER CREATING A NEW TODO?
+				getTodoscb()
+			})
+			.catch(logError)
+	}
 
+	deleteTodo(todo, getTodoscb) {
+		todoApi.delete(todo)
+			.then(res => {
+				this.getTodos(getTodoscb)
 			})
 			.catch(logError)
 	}
@@ -41,14 +51,11 @@ export default class TodoService {
 		//STEP 2: Change the completed flag to the opposite of what is is **HINT** todo.completed = !todo.completed
 		todoApi.put(todoId, todo)
 			.then(function (res) {
+				todo.completed = !todo.completed;
+				this.getTodos()
 				//DO YOU WANT TO DO ANYTHING WITH THIS?
 			})
 			.catch(logError)
-	}
-
-	removeTodo() {
-		// Umm this one is on you to write.... The method is a DELETE
-
 	}
 
 }

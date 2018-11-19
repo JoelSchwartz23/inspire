@@ -4,6 +4,7 @@ let apiUrl = url + encodeURIComponent(url2);
 //Do Not Edit above we have to go through the bcw-getter to access this api
 
 
+// @ts-ignore
 const quoteApi = axios.create({
 	baseURL: apiUrl,
 	timeout: 3000
@@ -11,10 +12,12 @@ const quoteApi = axios.create({
 
 
 export default class QuoteService {
-	getQuote(callWhenDone) {
+	getQuote(quotecb) {
 		console.log('looking for some good quotes')
 		quoteApi().then((res) => {
-			callWhenDone(res.data)
+			quotecb(res.data.quote)
 		})
 	}
 }
+
+
