@@ -26,11 +26,10 @@ ul{
   right: 20px;
   color: white;
   padding-left: 10px;
-  padding-right: 10px;
   text-shadow: 1px 1px black;
   text-shadow: 1px black;
   transition: .3s linear;
-  width: 50%;
+  width: 40%;
   box-shadow: 2px 2px 2px 2px black;
   border-radius:5px 5px 5px 5px;
 }
@@ -81,12 +80,12 @@ transform: scale(1.02);
 
 .time{
   font-family: 'Acme', sans-serif;
+   word-wrap: break-word;
   position: absolute;
   top: 40%;
   right: 42%;
   padding-left: 10px;
-  padding-right: 10px;
-  width: 16%;
+  width: 15%;
   color: white;
   text-shadow: 2px 2px black;
   font-size: 50px;
