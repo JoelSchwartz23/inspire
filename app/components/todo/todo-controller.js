@@ -25,7 +25,7 @@ function drawTodo(todos) {
 		// 
 		template += `
 			<li>
-				<input type="checkbox" ${todo.completed ? "checked" : ""}  onchange="app.controllers.todoController.toggleTodoStatus('${todo._id}')" id="${todo._id}">${todo.description}<i class="fa fa-fw fa-trash action muted" onclick="app.controllers.todoController.deleteTodo('${todo._id}')"></i>
+				<input type="checkbox" ${todo.completed ? "checked" : ""}  onchange="app.controllers.todoController.toggleTodoStatus('${todo._id}')" id="${todo._id}"> -- ${todo.description}<i class="fa fa-fw fa-trash action muted" onclick="app.controllers.todoController.deleteTodo('${todo._id}')"></i>
 			</li>
 		`
 	});

@@ -1,13 +1,8 @@
-.background{
-  background-image: unset;
- 
-  background-repeat: no-repeat;
-  background-attachment: fixed; 
-}
 body {
   background-size: cover;
   background-position: center;
 }
+
 ul{
   list-style-type: none; 
 }
@@ -26,14 +21,16 @@ ul{
 .todolist{
   font-family: 'Acme', sans-serif;
   position: absolute;
-  bottom: 30px;
-  right: 30px;
+  word-wrap: break-word;
+  bottom: 20px;
+  right: 20px;
   color: white;
   padding-left: 10px;
   padding-right: 10px;
   text-shadow: 1px 1px black;
   text-shadow: 1px black;
   transition: .3s linear;
+  width: 50%;
   box-shadow: 2px 2px 2px 2px black;
   border-radius:5px 5px 5px 5px;
 }
@@ -46,10 +43,10 @@ ul{
 .weather{
   font-family: 'Acme', sans-serif;
   position: absolute;
+  right: 50px;
+  top: 10px;
   padding-left: 10px;
   padding-right: 10px;
-  top: 20px;
-  right: 40px;
   color:white;
   text-shadow: 2px 2px black;
   text-transform: capitalize;
@@ -65,13 +62,12 @@ ul{
 }
 
 .quote{
-  font-family: 'Acme', sans-serif;
   position: absolute;
+  top: 10px;
+  font-family: 'Acme', sans-serif;
   padding-left: 10px;
   padding-right: 10px;
-  width: 30%;
-  top: 20px;
-  left: 10px;
+  width: 50%;
   color: white;
   text-shadow: 1px 1px black;
   transition: .3s linear;
@@ -86,10 +82,11 @@ transform: scale(1.02);
 .time{
   font-family: 'Acme', sans-serif;
   position: absolute;
+  top: 40%;
+  right: 42%;
   padding-left: 10px;
   padding-right: 10px;
-  top: 40%;
-  left: 45%; 
+  width: 16%;
   color: white;
   text-shadow: 2px 2px black;
   font-size: 50px;
@@ -111,3 +108,14 @@ input[type=text]:focus{
   background-color: rgba(170, 170, 182, 0.801);
 }
 
+.header{
+  height: 20vh;
+}
+
+.middle{
+height: 50vh;
+}
+
+.bottom{
+height: 40vh;
+}
