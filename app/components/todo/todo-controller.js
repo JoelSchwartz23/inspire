@@ -1,7 +1,5 @@
 import TodoService from "./todo-service.js";
 
-
-
 var todoService = new TodoService
 
 // Use this getTodos function as your callback for all other edits
@@ -69,7 +67,4 @@ export default class TodoController {
 		todoService.deleteTodo(todoId, drawTodo)
 		// ^^^^ THIS LINE OF CODE PROBABLY LOOKS VERY SIMILAR TO THE toggleTodoStatus
 	}
-
-
-
 }

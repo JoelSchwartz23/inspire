@@ -1,9 +1,7 @@
 
-
 const url = '//bcw-getter.herokuapp.com/?url=';
 const url2 = 'http://www.splashbase.co/api/v1/images/search?query=rocks'
 const apiUrl = url + encodeURIComponent(url2);
-
 
 // @ts-ignore
 const imgApi = axios.create({
