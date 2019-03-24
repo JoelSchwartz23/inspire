@@ -12,6 +12,5 @@ export default class ImageController {
   constructor() {
     _imageService.getImage(drawImage)
   }
-
 }
 

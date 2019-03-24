@@ -17,7 +17,6 @@ function logError(e) {
 
 export default class ImageService {
 	getImage(imagecb) {
-		// ^^^^^^^ How do you call this function?
 		console.log("Looking for a good pic")
 		imgApi().then(res => {
 			_image = res.data.images
